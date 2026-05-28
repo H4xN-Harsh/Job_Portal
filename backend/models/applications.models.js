@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const applicationSchema = mongoose.Schema({
-    jobs:{
+    job:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Jobs"
     },
