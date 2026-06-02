@@ -16,7 +16,7 @@ export default function Apply() {
                 { headers: { Authorization: `Bearer ${token}` } }
             );
             
-            navigate('/my-application')
+            navigate('/my-applications')
 
         }catch(err){
             console.log(err.response.data.message);
