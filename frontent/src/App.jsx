@@ -9,12 +9,15 @@ import JobDetails from './pages/JobDetails';
 import Apply from './pages/Apply';
 import MyApplications from './pages/MyApplications'
 import GiverPost from './pages/GiverPost';
+import GiverApplication from './pages/GiverApplication';
+import MyJobs from './pages/MyJobs';
 
 function App() {
   return (
     <>
       <Nav/>
       <Routes>
+        <Route path='/' element={<Login/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/jobs' element={<JobListing/>}/>
@@ -28,6 +31,12 @@ function App() {
 }/>
         <Route path='/dashboard' element={
           <ProtectedRoute><Dashboard/></ProtectedRoute>
+        }/>
+        <Route path='/applications' element={
+          <ProtectedRoute><GiverApplication/></ProtectedRoute>
+        }/>
+        <Route path='/my-jobs' element={
+          <ProtectedRoute><MyJobs/></ProtectedRoute>
         }/>
       </Routes>
     </>
