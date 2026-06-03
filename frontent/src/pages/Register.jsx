@@ -74,18 +74,7 @@ export default function Register(){
                     </div>
                     {/* Role buttons ke baad ye add karo */}
 
-                    {role === 'seeker' && (
-                        <div className="flex flex-col w-full gap-1">
-                            <label className="text-gray-400 text-sm">Resume URL</label>
-                            <input
-                                type="text"
-                                value={resume}
-                                onChange={(e)=>setResume(e.target.value)}
-                                placeholder="Enter resume link"
-                                className="bg-[#2A2A3A] text-white rounded-lg p-3 outline-none border border-gray-700 focus:border-                 [#10B981]"
-                            />
-                        </div>
-                    )}
+                    
 
                     {role === 'giver' && (
                         <div className="flex flex-col w-full gap-4">

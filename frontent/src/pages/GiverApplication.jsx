@@ -48,12 +48,12 @@ export default function GiverApplication(){
                             <p className="text-gray-400 text-sm">👤 {app.applicant?.name}</p>
                             <p className="text-gray-400 text-sm">📧 {app.applicant?.email}</p>
                             <a 
-                                href={app.resume} 
-                                target="_blank" 
-                                className="text-blue-400 hover:underline text-sm"
-                            >
-                                📄 View Resume
-                            </a>
+    href={`https://docs.google.com/viewer?url=${app.resume}`}
+    target="_blank" 
+    className="text-blue-400 hover:underline text-sm"
+>
+    📄 View Resume
+</a>
                             <span className={`text-sm font-medium w-fit px-3 py-1 rounded-full ${
                                 app.status === 'pending' ? 'bg-yellow-500/20 text-yellow-400' :
                                 app.status === 'reviewed' ? 'bg-blue-500/20 text-blue-400' :
